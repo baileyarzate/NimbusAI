@@ -10,4 +10,3 @@ async def takeoff(drone, altitude = 2.5):
             await drone.action.takeoff()
             print(f"-- Taking off to {altitude} meters AGL")
             await asyncio.sleep(2)  # Wait for the drone to stabilize in the air
-    return None

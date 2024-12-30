@@ -8,6 +8,9 @@ def generateprompt(userinput, formatted_telemetry):
     1. **goto()**: Moves the drone to a specific location and optionally for a specified amount of time.  
     2. **takeoff()**: Initiates the drone's ascent to a specified altitude. If the altitude is not specified, use the default takeoff height (2.5).  
     3. **land()**: Initiates the drone's descent to the ground.
+    4. **stop()**: Stops the drone's current action and hovers in place.
+    5. **rtb()**: Returns the drone to its takeoff location and lands.
+    6. **hold()**: Stops the drone's current action and hovers in place. Use this if user input is empty. 
 
     Here is the current telemetry data: {formatted_telemetry}  
 
@@ -43,6 +46,33 @@ def generateprompt(userinput, formatted_telemetry):
         }}
         ```
 
+    #### Hold Example:
+    - **User Command:** "Hold position."
+    - **Response:**
+        ```json
+        {{
+            "maneuver": "hold"
+        }}
+        ```
+        
+    #### Return to Base Example:
+    - **User Command:** "Return to base."
+    - **Response:**
+        ```json
+        {{
+            "maneuver": "rtb"
+        }}
+        ```
+        
+    #### Stop Example:
+    - **User Command:** "Stop the drone."
+    - **Response:**
+        ```json
+        {{
+            "maneuver": "stop"
+        }}
+        ```
+
     #### Takeoff Example:  
     - **User Command:** "Take off to 5 meters."  
     - **Response:**  
@@ -54,12 +84,12 @@ def generateprompt(userinput, formatted_telemetry):
         ```  
 
     #### Goto Example:  
-    - **User Command:** "Move 10 meters North."  
+    - **User Command:** "Move 10 meters North." 
     - **Response:**  
         ```json
         {{
             "maneuver": "goto",
-            "target_location": [LATITUDE_NUMBER, LONGITUDE_NUMBER, ALTITUDE_NUMBER, YAW_NUMBER],
+            "target_location": [Latitude Degrees, Longitude Degrees, Absolute Altitude Meters, Yaw Degrees],
             "flytime": 10
         }}
         ```  
