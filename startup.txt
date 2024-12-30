@@ -1,0 +1,12 @@
+in anaconda powershell,
+1. activate mavsdk virtual env
+2. navigate to Users\admin\Downloads
+3. activate mavsdk server .\mavsdk_server_win32.exe udp://172.22.160.111:18570 -p 50051
+
+in wsl command line,
+1. navigate to ~/PX4-Autopilot
+2. run the command make px4_sitl jmavsim
+
+in vs code,
+1. navigate to ~\Documents\Autonomous Flight\LLM Control
+2. run main.py in command line
