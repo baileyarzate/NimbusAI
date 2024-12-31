@@ -49,13 +49,15 @@ This project enables commanding a drone using natural language. Leveraging MAVSD
 4. The drone will interpret and execute commands, displaying real-time telemetry and status updates.
 
 ## Supported Commands
-Command	    Description
-goto	    Fly to a specified location with latitude, longitude, altitude, and yaw.
-takeoff	    Take off to a specified altitude.
-land	    Land at the current location.
-stop	    Stop current action and hover at the current location.
-rtb	        Return to the base location recorded at initialization.
-hold	    Hold position and hover in place.
+| Command  | Description                                                        |
+|:--------:|:------------------------------------------------------------------:|
+| goto     | Fly to a specified location with latitude, longitude, altitude, and yaw. |
+| takeoff  | Take off to a specified altitude.                                  |
+| land     | Land at the current location.                                      |
+| stop     | Stop current action and hover at the current location.             |
+| rtb      | Return to the base location recorded at initialization.            |
+| hold     | Hold position and hover in place.                                  |
+
 
 ## Architecture
     - Commands: Each maneuver is implemented in modular command files (commands folder).
