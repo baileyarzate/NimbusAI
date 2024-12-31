@@ -20,7 +20,7 @@ This project enables commanding a drone using natural language. Leveraging MAVSD
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/yourrepo.git
+   git clone https://github.com/baileyarzate/NimbusAI.git
    cd yourrepo
    ```
 
