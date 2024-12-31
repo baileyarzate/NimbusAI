@@ -26,7 +26,7 @@ This project enables commanding a drone using natural language. Leveraging MAVSD
 
 2. Install the required dependencies:
     ```bash
-    pip install -r requirements.txt
+    pip install -r requirements.txt #requirements file yet to be created.
     ```
 3. Add your Google GenAI API key in api_key.yaml:
     ```yaml
