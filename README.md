@@ -40,9 +40,11 @@ This project enables commanding a drone using natural language. Leveraging MAVSD
     python main.py
     ```
 3. Enter natural language commands in the terminal, such as:
-    - Fly North to 50.123, 10.456
+    - Fly Far North 
     - Land at the current location
     - Return to base
+    - Takeoff to 30 meters
+    - Hold location
 
 4. The drone will interpret and execute commands, displaying real-time telemetry and status updates.
 
