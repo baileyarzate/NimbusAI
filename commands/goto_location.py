@@ -47,10 +47,3 @@ async def gotoLLA(drone, location, flytime, maneuver='goto'):
         # Delay to prevent overloading the system with constant checks
         await asyncio.sleep(1)
     print("-- Action complete")
-    await hover(drone)
-    return None
-
-async def hover(drone):
-    # If your drone supports this command, you can use it
-    await drone.action.hold()
-

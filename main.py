@@ -1,5 +1,7 @@
 import json
 import asyncio
+import numpy as np
+import cv2
 from mavsdk import System
 from google import genai
 from commands.goto_location import *
@@ -46,7 +48,6 @@ async def run():
     print("-- Taking off")
     await drone.action.set_takeoff_altitude(2.5)
     await drone.action.takeoff()
-
     await asyncio.sleep(2)  # Wait for the drone to stabilize in the air
     async def monitor_and_control_drone(drone, stop_event: asyncio.Event):
         rtb_state_info = await retrieveinfo(drone)
@@ -64,7 +65,7 @@ async def run():
             if userinput.lower() == "exit":
                 print("Exiting the command interface.")
                 break  # Exit the loop and stop listening for commands
-            
+            #print(drone.telemetry.position())
 
             # Generate prompt for the LLM
             prompt = generateprompt(userinput, formatted_telemetry)

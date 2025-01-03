@@ -20,13 +20,13 @@ This project enables commanding a drone using natural language. Leveraging MAVSD
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/yourrepo.git
-   cd yourrepo
+   git clone https://github.com/baileyarzate/NimbusAI.git
+   cd NimbusAI
    ```
 
 2. Install the required dependencies:
     ```bash
-    pip install -r requirements.txt
+    pip install -r requirements.txt #requirements file yet to be created.
     ```
 3. Add your Google GenAI API key in api_key.yaml:
     ```yaml
@@ -40,20 +40,24 @@ This project enables commanding a drone using natural language. Leveraging MAVSD
     python main.py
     ```
 3. Enter natural language commands in the terminal, such as:
-    - Fly North to 50.123, 10.456
+    - Fly Far North 
     - Land at the current location
     - Return to base
+    - Takeoff to 30 meters
+    - Hold location
 
 4. The drone will interpret and execute commands, displaying real-time telemetry and status updates.
 
 ## Supported Commands
-Command	    Description
-goto	    Fly to a specified location with latitude, longitude, altitude, and yaw.
-takeoff	    Take off to a specified altitude.
-land	    Land at the current location.
-stop	    Stop current action and hover at the current location.
-rtb	        Return to the base location recorded at initialization.
-hold	    Hold position and hover in place.
+| Command  | Description                                                        |
+|:--------:|:------------------------------------------------------------------:|
+| goto     | Fly to a specified location with latitude, longitude, altitude, and yaw. |
+| takeoff  | Take off to a specified altitude.                                  |
+| land     | Land at the current location.                                      |
+| stop     | Stop current action and hover at the current location.             |
+| rtb      | Return to the base location recorded at initialization.            |
+| hold     | Hold position and hover in place.                                  |
+
 
 ## Architecture
     - Commands: Each maneuver is implemented in modular command files (commands folder).
