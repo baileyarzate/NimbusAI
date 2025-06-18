@@ -2,6 +2,9 @@
 
 This project enables commanding a drone using natural language. Leveraging MAVSDK for drone control and a Large Language Model (LLM) for natural language interpretation, it supports real-time decision-making and drone navigation.
 
+## Demo Video
+YouTube: https://www.youtube.com/shorts/_Phw4Dj5u2E
+
 ## Features
 
 - **Natural Language Commands**: Use plain English to command the drone to perform tasks such as takeoff, landing, navigation, and returning to the base.
